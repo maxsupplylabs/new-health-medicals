@@ -47,7 +47,7 @@ export default function Home() {
       name: "Dr. Sarah Johnson",
       role: "Hospital Administrator",
       hospital: "Central Medical Hospital",
-      text: "NewHealthMedicals has been our trusted partner for 5 years. Their reliability and after-sales support are unmatched in the industry.",
+      text: "New Health Medicals has been our trusted partner for 5 years. Their reliability and after-sales support are unmatched in the industry.",
       rating: 5,
     },
     {

@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Phone, MessageCircle, Mail } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -8,12 +9,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary-foreground rounded-lg flex items-center justify-center">
-                <span className="text-foreground font-bold text-lg">H</span>
-              </div>
-              <span className="font-bold text-lg">NewHealthMedicals</span>
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-24 h-42 bg-prmary rounded-lg flex items-center justify-center">
+              <span className="text- font-bold text-lg">
+                <Image src="/new-health-med-logo-white.svg" className="w-42 h-42 object-contain" alt="New Health Medicals" width={28} height={28} />
+              </span>
             </div>
+            {/* <span className="font-bold text-lg text-foreground hidden sm:inline">New Health Medicals</span> */}
+          </Link>
             <p className="text-sm opacity-90">Reliable distribution and installation of modern medical equipment.</p>
           </div>
 
@@ -94,8 +97,8 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} />
-                <a href="mailto:info@newhealthmedicals.com" className="hover:underline">
-                  info@newhealthmedicals.com
+                <a href="mailto:info@New Health Medicals.com" className="hover:underline">
+                  info@New Health Medicals.com
                 </a>
               </div>
             </div>
@@ -103,7 +106,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-75">
-          <p>&copy; 2025 NewHealthMedicals. All rights reserved. | Reliability in Medical Equipment Distribution</p>
+          <p>&copy; 2025 New Health Medicals. All rights reserved. | Reliability in Medical Equipment Distribution</p>
         </div>
       </div>
     </footer>

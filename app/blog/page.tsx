@@ -21,7 +21,7 @@ export default function BlogPage() {
       image: "/blog-medical-equipment-reliability.jpg",
       content: `Reliability in medical equipment is not just a feature—it's a necessity. When healthcare providers depend on equipment to monitor vital signs, deliver medications, or support patient mobility, any failure can have serious consequences.
 
-At NewHealthMedicals, we understand this responsibility. Every piece of equipment we distribute undergoes rigorous quality checks to ensure it meets international standards and performs consistently.
+At New Health Medicals, we understand this responsibility. Every piece of equipment we distribute undergoes rigorous quality checks to ensure it meets international standards and performs consistently.
 
 Key points about medical equipment reliability:
 - Reduces patient risk and improves safety
@@ -52,7 +52,7 @@ Recent innovations include:
 - Non-invasive monitoring technologies
 - Real-time data transmission capabilities
 
-NewHealthMedicals stays at the forefront of these innovations, ensuring our clients have access to the latest diagnostic tools.`,
+New Health Medicals stays at the forefront of these innovations, ensuring our clients have access to the latest diagnostic tools.`,
     },
     {
       id: 3,
@@ -85,7 +85,7 @@ NewHealthMedicals stays at the forefront of these innovations, ensuring our clie
 - Long-term maintenance expenses
 - Lifespan and ROI
 
-Our team at NewHealthMedicals can help you evaluate these factors and find the perfect solution for your facility.`,
+Our team at New Health Medicals can help you evaluate these factors and find the perfect solution for your facility.`,
     },
     {
       id: 4,
@@ -111,7 +111,7 @@ Benefits of proper home care equipment:
 - Lower healthcare costs
 - Improved family involvement in care
 
-NewHealthMedicals provides comprehensive home care solutions tailored to individual patient needs.`,
+New Health Medicals provides comprehensive home care solutions tailored to individual patient needs.`,
     },
     {
       id: 5,
@@ -137,7 +137,7 @@ Solutions that work:
 - Comprehensive training and support
 - Reliable after-sales service
 
-NewHealthMedicals partners with NGOs to provide affordable, reliable equipment that makes a real difference in communities.`,
+New Health Medicals partners with NGOs to provide affordable, reliable equipment that makes a real difference in communities.`,
     },
     {
       id: 6,

@@ -28,7 +28,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
       image: "/blog-medical-equipment-reliability.jpg",
       content: `Reliability in medical equipment is not just a feature—it's a necessity. When healthcare providers depend on equipment to monitor vital signs, deliver medications, or support patient mobility, any failure can have serious consequences.
 
-At NewHealthMedicals, we understand this responsibility. Every piece of equipment we distribute undergoes rigorous quality checks to ensure it meets international standards and performs consistently.
+At New Health Medicals, we understand this responsibility. Every piece of equipment we distribute undergoes rigorous quality checks to ensure it meets international standards and performs consistently.
 
 Key points about medical equipment reliability:
 - Reduces patient risk and improves safety
@@ -57,7 +57,7 @@ When selecting a medical equipment supplier, consider:
 - Warranty and replacement policies
 - Customer testimonials and references
 
-NewHealthMedicals has built its reputation on reliability. We stand behind every product we distribute and provide comprehensive support throughout the equipment's lifespan.`,
+New Health Medicals has built its reputation on reliability. We stand behind every product we distribute and provide comprehensive support throughout the equipment's lifespan.`,
     },
     "2": {
       title: "Latest Advances in Diagnostic Medical Technology",
@@ -95,7 +95,7 @@ One of the most exciting developments is the increasing availability of affordab
 - NGOs can expand their services
 - Home-based monitoring becomes more practical
 
-NewHealthMedicals stays at the forefront of these innovations, ensuring our clients have access to the latest diagnostic tools at competitive prices.`,
+New Health Medicals stays at the forefront of these innovations, ensuring our clients have access to the latest diagnostic tools at competitive prices.`,
     },
     "3": {
       title: "Choosing the Right Hospital Bed for Your Facility",
@@ -149,7 +149,7 @@ Safety Features to Look For
 - Non-slip surfaces
 - Easy-to-clean materials
 
-Our team at NewHealthMedicals can help you evaluate these factors and find the perfect solution for your facility.`,
+Our team at New Health Medicals can help you evaluate these factors and find the perfect solution for your facility.`,
     },
     "4": {
       title: "Supporting Home Care: Essential Equipment for Elderly Patients",
@@ -192,7 +192,7 @@ Modern home care equipment enables:
 - Better medication adherence
 - Improved patient confidence
 
-NewHealthMedicals provides comprehensive home care solutions tailored to individual patient needs.`,
+New Health Medicals provides comprehensive home care solutions tailored to individual patient needs.`,
     },
     "5": {
       title: "NGO Healthcare Initiatives: Equipping Clinics in Underserved Areas",
@@ -228,7 +228,7 @@ Quality equipment enables NGOs to:
 
 Partnership Approach
 
-NewHealthMedicals partners with NGOs to:
+New Health Medicals partners with NGOs to:
 - Understand their specific needs
 - Provide affordable bulk pricing
 - Offer flexible payment terms

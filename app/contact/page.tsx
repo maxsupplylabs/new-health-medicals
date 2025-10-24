@@ -67,10 +67,10 @@ export default function ContactPage() {
                   <h3 className="font-semibold text-foreground">Email</h3>
                 </div>
                 <a
-                  href="mailto:info@newhealthmedicals.com"
+                  href="mailto:info@New Health Medicals.com"
                   className="text-accent hover:underline font-semibold text-lg"
                 >
-                  info@newhealthmedicals.com
+                  info@New Health Medicals.com
                 </a>
                 <p className="text-muted-foreground text-sm mt-2">We respond within 24 hours</p>
               </div>
@@ -165,8 +165,8 @@ export default function ContactPage() {
                     <p className="text-sm text-muted-foreground mb-2">For detailed inquiries:</p>
                     <p className="font-semibold text-foreground">
                       Email us at{" "}
-                      <a href="mailto:info@newhealthmedicals.com" className="text-accent hover:underline">
-                        info@newhealthmedicals.com
+                      <a href="mailto:info@New Health Medicals.com" className="text-accent hover:underline">
+                        info@New Health Medicals.com
                       </a>
                     </p>
                   </div>

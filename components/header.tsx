@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { useChat } from "@/lib/chat-context"
+import Image from "next/image"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,10 +20,12 @@ export function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">H</span>
+            <div className="w-32 h-32 bg-prmary rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">
+                <Image src="/new-health-med-logo.svg" className="w-32 h-32 object-contain" alt="New Health Medicals" width={28} height={28} />
+              </span>
             </div>
-            <span className="font-bold text-lg text-foreground hidden sm:inline">NewHealthMedicals</span>
+            {/* <span className="font-bold text-lg text-foreground hidden sm:inline">New Health Medicals</span> */}
           </Link>
 
           {/* Desktop Navigation */}

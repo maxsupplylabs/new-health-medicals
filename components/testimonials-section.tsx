@@ -24,7 +24,7 @@ export function TestimonialsSection({ testimonials }: TestimonialsSectionProps) 
       name: "Dr. Sarah Johnson",
       role: "Hospital Administrator",
       organization: "Central Medical Hospital",
-      text: "NewHealthMedicals has been our trusted partner for 5 years. Their reliability and after-sales support are unmatched in the industry. Every piece of equipment works flawlessly.",
+      text: "New Health Medicals has been our trusted partner for 5 years. Their reliability and after-sales support are unmatched in the industry. Every piece of equipment works flawlessly.",
       rating: 5,
     },
     {

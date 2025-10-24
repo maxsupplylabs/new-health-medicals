@@ -57,7 +57,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary/10 to-secondary/10 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">About NewHealthMedicals</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">About New Health Medicals</h1>
           <p className="text-xl text-muted-foreground max-w-3xl">
             Trusted partner in medical equipment distribution, committed to bringing reliable, quality healthcare
             solutions to hospitals, clinics, pharmacies, NGOs, and home care patients worldwide.
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">Our Story</h2>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                NewHealthMedicals was founded with a simple mission: to make quality medical equipment accessible and
+                New Health Medicals was founded with a simple mission: to make quality medical equipment accessible and
                 reliable for every healthcare provider, regardless of size or location.
               </p>
               <p className="text-muted-foreground mb-4 leading-relaxed">
@@ -86,7 +86,7 @@ export default function AboutPage() {
                 preferred choice for healthcare providers who refuse to compromise on quality.
               </p>
             </div>
-            <img src="/about-company-story.jpg" alt="NewHealthMedicals Team" className="rounded-lg shadow-lg" />
+            <img src="/about-company-story.jpg" alt="New Health Medicals Team" className="rounded-lg shadow-lg" />
           </div>
         </div>
       </section>
@@ -114,7 +114,7 @@ export default function AboutPage() {
       {/* Why Choose Us */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Why Choose NewHealthMedicals?</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Why Choose New Health Medicals?</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
@@ -193,7 +193,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Partner With Us?</h2>
           <p className="text-lg mb-8 opacity-90">
-            Let's discuss how NewHealthMedicals can support your healthcare facility's needs.
+            Let's discuss how New Health Medicals can support your healthcare facility's needs.
           </p>
           <Link
             href="/contact"

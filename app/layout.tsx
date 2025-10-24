@@ -10,7 +10,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "NewHealthMedicals - Medical Equipment Distribution",
+  title: "New Health Medicals - Medical Equipment Distribution",
   description:
     "Reliable distribution and installation of modern medical equipment for hospitals, clinics, pharmacies, and home care",
   generator: "v0.app",

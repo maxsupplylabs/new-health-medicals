@@ -134,7 +134,7 @@ export function HeroCarousel() {
       </div>
 
       {/* Navigation Arrows */}
-      <button
+      {/* <button
         onClick={prevSlide}
         className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-2 md:p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
         aria-label="Previous slide"
@@ -148,7 +148,7 @@ export function HeroCarousel() {
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
-      </button>
+      </button> */}
 
       {/* Navigation Dots */}
       <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2 md:gap-3">
@@ -167,9 +167,9 @@ export function HeroCarousel() {
       </div>
 
       {/* Slide Counter */}
-      <div className="absolute top-6 md:top-8 right-6 md:right-8 z-20 text-white text-sm md:text-base font-semibold bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm">
+      {/* <div className="absolute top-6 md:top-8 right-6 md:right-8 z-20 text-white text-sm md:text-base font-semibold bg-black/40 px-4 py-2 rounded-full backdrop-blur-sm">
         {currentSlide + 1} / {heroSlides.length}
-      </div>
+      </div> */}
     </section>
   )
 }

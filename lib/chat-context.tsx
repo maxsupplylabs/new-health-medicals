@@ -42,7 +42,7 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
     {
       id: "1",
       type: "bot",
-      content: "Welcome to NewHealthMedicals! I'm Crisp, your AI assistant. How can I help you today?",
+      content: "Welcome to New Health Medicals! I'm Crisp, your AI assistant. How can I help you today?",
       timestamp: new Date(),
       buttons: [
         { id: "b1", label: "Browse Products", action: "browse" },
@@ -118,7 +118,7 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
       {
         id: "1",
         type: "bot",
-        content: "Welcome to NewHealthMedicals! I'm Crisp, your AI assistant. How can I help you today?",
+        content: "Welcome to New Health Medicals! I'm Crisp, your AI assistant. How can I help you today?",
         timestamp: new Date(),
         buttons: [
           { id: "b1", label: "Browse Products", action: "browse" },
@@ -201,7 +201,7 @@ function generateBotResponse(
   if (lowerMessage.includes("hello") || lowerMessage.includes("hi")) {
     return {
       response:
-        "Hello! Welcome to NewHealthMedicals. I'm here to help you find the perfect medical equipment for your needs. What are you looking for today?",
+        "Hello! Welcome to New Health Medicals. I'm here to help you find the perfect medical equipment for your needs. What are you looking for today?",
       responseButtons: [
         { id: "b1", label: "Browse Products", action: "browse" },
         { id: "b2", label: "Request Quote", action: "quote" },
@@ -234,7 +234,7 @@ function generateBotResponse(
   if (lowerMessage.includes("contact") || lowerMessage.includes("support")) {
     return {
       response:
-        "You can reach our team at:\n📞 Phone: +1 (234) 567-890\n💬 WhatsApp: +1 (234) 567-890\n📧 Email: sales@newhealthmedicals.com\n\nOr I can help you submit a quote request right here!",
+        "You can reach our team at:\n📞 Phone: +1 (234) 567-890\n💬 WhatsApp: +1 (234) 567-890\n📧 Email: sales@New Health Medicals.com\n\nOr I can help you submit a quote request right here!",
       responseButtons: [
         { id: "b1", label: "Request Quote", action: "quote" },
         { id: "b2", label: "Back to Menu", action: "browse" },

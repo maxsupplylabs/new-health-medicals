@@ -49,8 +49,8 @@ export function ScristChatWidget() {
           <div className="bg-gradient-to-r from-primary to-accent p-4 text-white">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-bold text-lg">Scrist AI</h3>
-                <p className="text-xs opacity-90">NewHealthMedicals Support</p>
+                <h3 className="font-bold text-lg">Crisp AI</h3>
+                <p className="text-xs opacity-90">New Health Medicals Support</p>
               </div>
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             </div>
