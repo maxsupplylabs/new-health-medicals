@@ -12,7 +12,7 @@ export function Footer() {
           <Link href="/" className="flex items-center gap-2">
             <div className="w-24 h-42 bg-prmary rounded-lg flex items-center justify-center">
               <span className="text- font-bold text-lg">
-                <Image src="/new-health-med-logo-white.svg" className="w-42 h-42 object-contain" alt="New Health Medicals" width={28} height={28} />
+                <Image src="/new-health-medicals-logo-white.svg" className="w-42 h-42 object-contain" alt="New Health Medicals" width={28} height={28} />
               </span>
             </div>
             {/* <span className="font-bold text-lg text-foreground hidden sm:inline">New Health Medicals</span> */}

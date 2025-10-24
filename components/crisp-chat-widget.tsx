@@ -57,9 +57,9 @@ export function CrispChatWidget() {
 
       {/* Chat Window - Improved responsive design for mobile */}
       {isOpen && (
-        <div className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-40 w-full sm:w-96 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-border flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 h-[600px] sm:h-[600px]">
+        <div className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-50 w-full sm:w-96 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-border flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 h-[80vh] sm:h-[80vh]">
           {/* Header */}
-          <div className="bg-gradient-to-r from-primary to-accent p-4 text-white flex-shrink-0">
+          <div className="bg--r from-primary to-accent p-4 text-white flex-shrink-0">
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="font-bold text-lg">Crisp</h3>

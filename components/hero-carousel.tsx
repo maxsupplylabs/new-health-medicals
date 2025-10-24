@@ -80,7 +80,7 @@ export function HeroCarousel() {
   const slide = heroSlides[currentSlide]
 
   return (
-    <section className="relative w-full h-screen max-h-[600px] md:max-h-[700px] overflow-hidden bg-background">
+    <section className="relative z-10 top-[-100px] left-0 right-0 w-full h-screen max-h-[600px] md:max-h-[700px] overflow-hidden bg-background">
       {/* Slides Container */}
       <div className="relative w-full h-full">
         {heroSlides.map((s, index) => (
@@ -101,7 +101,7 @@ export function HeroCarousel() {
             </div>
 
             {/* Content - Layered Text */}
-            <div className="absolute inset-0 flex flex-col justify-center items-start px-4 sm:px-8 md:px-12 lg:px-16">
+            <div className="absolute inset-0 flex flex-col justify-center items-start px-4 sm:px-8 md:px-12 lg:px-16 md:pt-20">
               <div className="max-w-2xl">
                 {/* Subtitle */}
                 <div className="mb-4 md:mb-6">

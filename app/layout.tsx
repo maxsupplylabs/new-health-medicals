@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "New Health Medicals - Medical Equipment Distribution",
   description:
     "Reliable distribution and installation of modern medical equipment for hospitals, clinics, pharmacies, and home care",
-  generator: "v0.app",
+  generator: "",
 }
 
 export default function RootLayout({
