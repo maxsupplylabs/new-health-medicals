@@ -1,8 +1,17 @@
+"use client"
+
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Phone, MessageCircle, Mail, Clock } from "lucide-react"
+import { useChat } from "@/lib/chat-context"
 
 export default function ContactPage() {
+  const { setIsOpen: setChatOpen } = useChat()
+
+  const handleQuoteClick = () => {
+    setChatOpen(true)
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
@@ -70,7 +79,7 @@ export default function ContactPage() {
                   href="mailto:info@New Health Medicals.com"
                   className="text-accent hover:underline font-semibold text-lg"
                 >
-                  info@New Health Medicals.com
+                  info@newhealthmedicals.com
                 </a>
                 <p className="text-muted-foreground text-sm mt-2">We respond within 24 hours</p>
               </div>
@@ -166,7 +175,7 @@ export default function ContactPage() {
                     <p className="font-semibold text-foreground">
                       Email us at{" "}
                       <a href="mailto:info@New Health Medicals.com" className="text-accent hover:underline">
-                        info@New Health Medicals.com
+                        info@newhealthmedicals.com
                       </a>
                     </p>
                   </div>
@@ -214,14 +223,15 @@ export default function ContactPage() {
             >
               Call Now
             </a>
-            <a
-              href="https://wa.me/1234567890"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              // href="https://wa.me/1234567890"
+              // target="_blank"
+              // rel="noopener noreferrer"
+            onClick={handleQuoteClick}
               className="inline-block border-2 border-primary-foreground text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary-foreground/10 transition font-semibold"
             >
-              WhatsApp
-            </a>
+              Let's chat
+            </button>
           </div>
         </div>
       </section>

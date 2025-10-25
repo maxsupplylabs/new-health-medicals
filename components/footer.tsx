@@ -84,7 +84,7 @@ export function Footer() {
                   +1 (234) 567-890
                 </a>
               </div>
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <MessageCircle size={16} />
                 <a
                   href="https://wa.me/1234567890"
@@ -94,11 +94,11 @@ export function Footer() {
                 >
                   WhatsApp
                 </a>
-              </div>
+              </div> */}
               <div className="flex items-center gap-2">
                 <Mail size={16} />
                 <a href="mailto:info@New Health Medicals.com" className="hover:underline">
-                  info@New Health Medicals.com
+                  info@newhealthmedicals.com
                 </a>
               </div>
             </div>

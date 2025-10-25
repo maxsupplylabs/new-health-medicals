@@ -226,7 +226,7 @@ Our surgical instrument sets come with comprehensive care guidelines to ensure o
 
             {/* Blog Posts */}
             <div className="lg:col-span-3">
-              <div className="space-y-8">
+              <div className="flex flex-col gap-2">
                 {filteredPosts.map((post) => (
                   <Link key={post.id} href={`/blog/${post.id}`}>
                     <div className="bg-white rounded-lg overflow-hidden border border-border hover:shadow-lg transition cursor-pointer">

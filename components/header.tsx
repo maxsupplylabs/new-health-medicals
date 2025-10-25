@@ -5,32 +5,40 @@ import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { useChat } from "@/lib/chat-context"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { setIsOpen: setChatOpen } = useChat()
+  const pathname = usePathname()
 
-  // Detect scroll and toggle blurred background
+  // Only run scroll effect on homepage
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10)
+    if (pathname !== "/") {
+      setScrolled(false)
+      return
     }
 
+    const handleScroll = () => setScrolled(window.scrollY > 10)
     window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
-  const handleQuoteClick = () => {
-    setChatOpen(true)
-  }
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [pathname])
+
+  const handleQuoteClick = () => setChatOpen(true)
+
+  // Determine if we're on the homepage
+  const isHome = pathname === "/"
 
   return (
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
-        scrolled
+        isHome && scrolled
           ? "backdrop-blur-md bg-white/80 shadow-sm"
-          : "bg-transparent"
+          : isHome
+          ? "bg-transparent"
+          : "bg-white shadow-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto pl-2 pr-4 sm:px-6 lg:px-8">
@@ -39,9 +47,9 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2 md:ml-6">
             <Image
               src={
-                scrolled
-                  ? "/new-health-medicals-logo-white.svg"
-                  : "/new-health-medicals-logo-black.svg"
+                isHome && !scrolled
+                  ? "/new-health-medicals-logo-black.svg"
+                  : "/new-health-medicals-logo-white.svg"
               }
               alt="New Health Medicals"
               width={120}
@@ -63,9 +71,9 @@ export function Header() {
                 key={href}
                 href={href}
                 className={`transition font-medium ${
-                  scrolled
-                    ? "text-foreground hover:text-primary"
-                    : "text-white hover:text-primary-foreground/90"
+                  isHome && !scrolled
+                    ? "text-white hover:text-primary-foreground/90"
+                    : "text-foreground hover:text-primary"
                 }`}
               >
                 {label}
@@ -77,9 +85,9 @@ export function Header() {
           <button
             onClick={handleQuoteClick}
             className={`hidden md:inline-block px-6 py-2 rounded-lg font-medium transition ${
-              scrolled
-                ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                : "bg-white text-primary hover:bg-white/90"
+              isHome && !scrolled
+                ? "bg-white text-primary hover:bg-white/90"
+                : "bg-primary text-primary-foreground hover:bg-primary/90"
             }`}
           >
             Request Quote
@@ -89,7 +97,9 @@ export function Header() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`md:hidden p-2 rounded-lg transition ${
-              scrolled ? "text-foreground hover:bg-muted" : "text-white hover:bg-white/10"
+              isHome && !scrolled
+                ? "text-white hover:bg-white/10"
+                : "text-foreground hover:bg-muted"
             }`}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -100,7 +110,7 @@ export function Header() {
         {isOpen && (
           <nav
             className={`md:hidden pb-4 flex flex-col gap-3 transition-colors ${
-              scrolled ? "text-foreground" : "text-white"
+              isHome && !scrolled ? "text-white" : "text-foreground"
             }`}
           >
             <Link href="/" className="hover:text-primary transition py-2">
@@ -121,9 +131,9 @@ export function Header() {
             <button
               onClick={handleQuoteClick}
               className={`px-4 py-2 rounded-lg font-medium text-center transition ${
-                scrolled
-                  ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                  : "bg-white text-primary hover:bg-white/90"
+                isHome && !scrolled
+                  ? "bg-white text-primary hover:bg-white/90"
+                  : "bg-primary text-primary-foreground hover:bg-primary/90"
               }`}
             >
               Request Quote
