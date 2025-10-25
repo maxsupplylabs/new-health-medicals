@@ -1,9 +1,24 @@
 "use client"
 
-import type React from "react"
 import { useChat } from "@/lib/chat-context"
 import { useState, useRef, useEffect } from "react"
 import { X, Send, MessageCircle, Loader } from "lucide-react"
+import type React from "react"
+
+// Define local message and button types for safety
+interface ChatButton {
+  id: string
+  label: string
+  action: string
+}
+
+interface ChatMessage {
+  id: string
+  type: "user" | "bot"
+  content: string
+  timestamp: Date
+  buttons?: ChatButton[]
+}
 
 export function CrispChatWidget() {
   const { messages, isOpen, setIsOpen, addMessage, handleButtonClick, quoteContext } = useChat()
@@ -11,20 +26,23 @@ export function CrispChatWidget() {
   const [isTyping, setIsTyping] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
-  }
-
+  // Smooth scroll when messages update
   useEffect(() => {
-    scrollToBottom()
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
   }, [messages])
 
+  // Handle typing indicator visibility
   useEffect(() => {
-    const lastMessage = messages[messages.length - 1]
-    if (lastMessage?.type === "user") {
+    if (messages.length === 0) return
+
+    const lastMessage = messages[messages.length - 1] as ChatMessage
+
+    if (lastMessage.type === "user") {
+      // Show "typing..." after user sends
       setIsTyping(true)
-      const timer = setTimeout(() => setIsTyping(false), 1200)
-      return () => clearTimeout(timer)
+    } else if (lastMessage.type === "bot") {
+      // Hide once bot replies
+      setIsTyping(false)
     }
   }, [messages])
 
@@ -34,15 +52,16 @@ export function CrispChatWidget() {
 
     addMessage(inputValue, "user")
     setInputValue("")
+
+    // Delay typing to feel natural
+    setTimeout(() => setIsTyping(true), 300)
   }
 
-  const handleButtonClick_ = (action: string) => {
-    handleButtonClick(action)
-  }
+  const handleButtonClick_ = (action: string) => handleButtonClick(action)
 
   return (
     <>
-      {/* Chat Widget Button */}
+      {/* Floating Chat Toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 w-14 h-14 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center ${
@@ -55,18 +74,19 @@ export function CrispChatWidget() {
         {isOpen ? <X size={24} className="text-white" /> : <MessageCircle size={24} className="text-white" />}
       </button>
 
-      {/* Chat Window - Improved responsive design for mobile */}
+      {/* Chat Window */}
       {isOpen && (
         <div className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-50 w-full sm:w-96 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-border flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 h-[80vh] sm:h-[80vh]">
           {/* Header */}
-          <div className="bg--r from-primary to-accent p-4 text-white flex-shrink-0">
+          <div className="bg-primary p-4 text-white flex-shrink-0">
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="font-bold text-lg">Crisp</h3>
                 <p className="text-xs opacity-90">New Health Medicals Support</p>
               </div>
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
             </div>
+
             {quoteContext.productName && (
               <div className="mt-3 bg-white/20 rounded-lg p-2 text-sm">
                 <p className="font-semibold truncate">{quoteContext.productName}</p>
@@ -77,9 +97,9 @@ export function CrispChatWidget() {
             )}
           </div>
 
-          {/* Messages - Better scrolling and responsive spacing */}
+          {/* Messages */}
           <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 bg-background">
-            {messages.map((message) => (
+            {messages.map((message: ChatMessage) => (
               <div key={message.id} className={`flex ${message.type === "user" ? "justify-end" : "justify-start"}`}>
                 <div
                   className={`max-w-xs sm:max-w-sm px-4 py-2 rounded-lg ${
@@ -93,7 +113,7 @@ export function CrispChatWidget() {
                     {message.timestamp.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
                   </p>
 
-                  {message.buttons && message.buttons.length > 0 && (
+                  {message.buttons?.length ? (
                     <div className="mt-3 flex flex-col gap-2">
                       {message.buttons.map((button) => (
                         <button
@@ -105,15 +125,16 @@ export function CrispChatWidget() {
                         </button>
                       ))}
                     </div>
-                  )}
+                  ) : null}
                 </div>
               </div>
             ))}
 
+            {/* Typing Indicator */}
             {isTyping && (
               <div className="flex justify-start">
-                <div className="bg-muted text-foreground rounded-lg rounded-bl-none border border-border px-4 py-2 flex items-center gap-1">
-                  <Loader size={16} className="animate-spin" />
+                <div className="bg-muted text-foreground rounded-lg rounded-bl-none border border-border px-4 py-2 flex items-center gap-2 animate-fade-in">
+                  <Loader size={16} className="animate-spin text-muted-foreground" />
                   <span className="text-xs text-muted-foreground">Crisp is typing...</span>
                 </div>
               </div>
@@ -122,7 +143,7 @@ export function CrispChatWidget() {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input - Better mobile responsiveness */}
+          {/* Input */}
           <form onSubmit={handleSendMessage} className="border-t border-border p-3 sm:p-4 bg-white flex-shrink-0">
             <div className="flex gap-2">
               <input
