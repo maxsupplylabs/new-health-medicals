@@ -6,6 +6,8 @@ import { useChat } from "@/lib/chat-context"
 import Link from "next/link"
 import { useState } from "react"
 import { CheckCircle, Truck, Shield, Phone } from "lucide-react"
+import { CertificationBadges } from "@/components/certification-badges"
+import { ProductAvailability } from "@/components/product-availability"
 
 export default function ProductDetailPage({ params }: { params: { id: string } }) {
   const [quantity, setQuantity] = useState(1)
@@ -23,6 +25,10 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
       specs: string[]
       features: string[]
       applications: string[]
+      certifications?: string[]
+      stock?: "in-stock" | "limited" | "pre-order"
+      leadTime?: string
+      warranty?: string
     }
   > = {
     "1": {
@@ -49,6 +55,10 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
         "Meets international medical standards",
       ],
       applications: ["Hospitals", "Clinics", "Home care", "Nursing homes", "Rehabilitation centers"],
+      certifications: ["ISO 13485", "CE Certified", "FDA Approved"],
+      stock: "in-stock",
+      leadTime: "3-5 business days",
+      warranty: "2 years comprehensive",
     },
     "2": {
       name: "Digital Blood Pressure Monitor",
@@ -74,6 +84,10 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
         "Hypertension indicator",
       ],
       applications: ["Clinics", "Pharmacies", "Home care", "Hospitals", "Wellness centers"],
+      certifications: ["ISO 13485", "CE Certified"],
+      stock: "in-stock",
+      leadTime: "2-3 business days",
+      warranty: "1 year",
     },
     "3": {
       name: "Surgical Instrument Set",
@@ -99,6 +113,10 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
         "Lifetime warranty on defects",
       ],
       applications: ["Hospitals", "Surgical centers", "Clinics", "Medical training institutions"],
+      certifications: ["ISO 13485", "CE Certified", "FDA Approved"],
+      stock: "limited",
+      leadTime: "5-7 business days",
+      warranty: "Lifetime on defects",
     },
     "4": {
       name: "Mobility Walker",
@@ -124,6 +142,10 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
         "Easy to clean",
       ],
       applications: ["Home care", "Hospitals", "Rehabilitation centers", "Nursing homes", "Clinics"],
+      certifications: ["ISO 13485", "CE Certified"],
+      stock: "in-stock",
+      leadTime: "2-3 business days",
+      warranty: "1 year",
     },
   }
 
@@ -199,6 +221,12 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
 
               <p className="text-lg text-muted-foreground mb-6">{product.fullDescription}</p>
 
+              {product.certifications && (
+                <div className="mb-6">
+                  <CertificationBadges certifications={product.certifications} />
+                </div>
+              )}
+
               {/* Quantity and CTA */}
               <div className="flex items-center gap-4 mb-8">
                 <div className="flex items-center border border-border rounded-lg">
@@ -231,6 +259,10 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                 >
                   Bulk Order via Chat
                 </button>
+              </div>
+
+              <div className="mb-8">
+                <ProductAvailability stock={product.stock} leadTime={product.leadTime} warranty={product.warranty} />
               </div>
 
               {/* Benefits */}

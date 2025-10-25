@@ -5,6 +5,8 @@ import { CheckCircle, Zap, Shield, Users } from "lucide-react"
 import { QuoteRequestSection } from "@/components/quote-request-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { HeroCarousel } from "@/components/hero-carousel"
+import { TrustCounter } from "@/components/trust-counter"
+import { CaseStudiesSection } from "@/components/case-studies-section"
 
 export default function Home() {
   const featuredProducts = [
@@ -154,6 +156,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <TrustCounter />
+
+      <CaseStudiesSection />
 
       <TestimonialsSection />
 

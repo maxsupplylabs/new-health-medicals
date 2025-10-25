@@ -32,21 +32,25 @@ export default function AboutPage() {
       name: "Dr. Amara Okonkwo",
       role: "Founder & CEO",
       bio: "20+ years in medical equipment distribution with a passion for improving healthcare access",
+      image: "/team-member-1.jpg",
     },
     {
       name: "Mr. Rajesh Kumar",
       role: "Operations Director",
       bio: "Expert in supply chain management and logistics for medical equipment",
+      image: "/team-member-2.jpg",
     },
     {
       name: "Ms. Elena Rodriguez",
       role: "Quality Assurance Manager",
       bio: "Ensures all equipment meets international standards and certifications",
+      image: "/team-member-3.jpg",
     },
     {
       name: "Mr. David Chen",
       role: "Customer Support Lead",
       bio: "Dedicated to providing exceptional service and technical support to all clients",
+      image: "/team-member-4.jpg",
     },
   ]
 
@@ -175,10 +179,15 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg border border-border text-center">
-                <div className="w-20 h-20 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary">{member.name.charAt(0)}</span>
-                </div>
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg border border-border text-center hover:shadow-lg transition"
+              >
+                <img
+                  src={member.image || "/placeholder.svg"}
+                  alt={member.name}
+                  className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-primary/20"
+                />
                 <h3 className="font-semibold text-lg text-foreground mb-1">{member.name}</h3>
                 <p className="text-secondary font-semibold mb-3">{member.role}</p>
                 <p className="text-muted-foreground text-sm">{member.bio}</p>
