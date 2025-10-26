@@ -116,7 +116,7 @@ export default function Home() {
       </section>
 
       {/* Featured Products */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+      <section className="pb-16 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Featured Products</h2>

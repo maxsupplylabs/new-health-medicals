@@ -18,7 +18,7 @@ export default function BlogPage() {
       category: "Healthcare",
       author: "Dr. Sarah Johnson",
       date: "October 15, 2025",
-      image: "/blog-medical-equipment-reliability.jpg",
+      image: "/blog/medical-equipment-reliability.webp",
       content: `Reliability in medical equipment is not just a feature—it's a necessity. When healthcare providers depend on equipment to monitor vital signs, deliver medications, or support patient mobility, any failure can have serious consequences.
 
 At New Health Medicals, we understand this responsibility. Every piece of equipment we distribute undergoes rigorous quality checks to ensure it meets international standards and performs consistently.
@@ -40,7 +40,7 @@ Our commitment to reliability means you can focus on what matters most—providi
       category: "Technology",
       author: "Mr. Ahmed Hassan",
       date: "October 10, 2025",
-      image: "/blog-diagnostic-technology.jpg",
+      image: "/blog/diagnostic-medical-technology.jpg",
       content: `The field of diagnostic medicine is evolving rapidly. New technologies are making it easier, faster, and more accurate to diagnose conditions early, when treatment is most effective.
 
 From portable ultrasound devices to AI-powered diagnostic systems, modern medical equipment is revolutionizing healthcare delivery. These advances are particularly valuable in remote areas and resource-limited settings.
@@ -62,7 +62,7 @@ New Health Medicals stays at the forefront of these innovations, ensuring our cl
       category: "Equipment Guide",
       author: "Ms. Priya Sharma",
       date: "October 5, 2025",
-      image: "/blog-hospital-bed-selection.jpg",
+      image: "/blog/hospital-bed-selection.webp",
       content: `Selecting the right hospital bed is a critical decision that affects patient care quality and staff efficiency. Here's what you need to consider:
 
 1. Patient Needs
@@ -94,7 +94,7 @@ Our team at New Health Medicals can help you evaluate these factors and find the
       category: "Home Care",
       author: "Dr. Sarah Johnson",
       date: "September 28, 2025",
-      image: "/blog-home-care-equipment.jpg",
+      image: "/blog/home-health-essentials.webp",
       content: `Home care is becoming increasingly popular as patients prefer to recover in familiar environments. The right equipment makes this possible while ensuring safety and comfort.
 
 Essential home care equipment includes:
@@ -121,7 +121,7 @@ New Health Medicals provides comprehensive home care solutions tailored to indiv
       category: "Community Health",
       author: "Mr. Ahmed Hassan",
       date: "September 20, 2025",
-      image: "/blog-ngo-healthcare.jpg",
+      image: "/blog/ngo-healthcare.jpg",
       content: `NGOs play a vital role in extending healthcare services to underserved populations. Access to quality medical equipment is essential for their success.
 
 Challenges faced by NGOs:
@@ -146,7 +146,7 @@ New Health Medicals partners with NGOs to provide affordable, reliable equipment
       category: "Best Practices",
       author: "Ms. Priya Sharma",
       date: "September 15, 2025",
-      image: "/blog-surgical-instruments-care.jpg",
+      image: "/blog/surgical-instruments-care.webp ",
       content: `Proper sterilization and maintenance of surgical instruments is critical for patient safety and infection control. Here's what healthcare facilities need to know:
 
 Sterilization Methods:
