@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-primary-foreground py-12">
+    <footer className="bg-foreground text-primary-foreground pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
@@ -12,7 +12,7 @@ export function Footer() {
           <Link href="/" className="flex items-center gap-2">
             <div className="w-24 h-42 bg-prmary rounded-lg flex items-center justify-center">
               <span className="text- font-bold text-lg">
-                <Image src="/new-health-medicals-logo-white.svg" className="w-42 h-42 object-contain" alt="New Health Medicals" width={28} height={28} />
+                <Image src="/new-health-medicals-logo-black.svg" className="w-62 h-62 object-contain" alt="New Health Medicals" width={28} height={28} />
               </span>
             </div>
             {/* <span className="font-bold text-lg text-foreground hidden sm:inline">New Health Medicals</span> */}

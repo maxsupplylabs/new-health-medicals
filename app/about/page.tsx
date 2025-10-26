@@ -90,7 +90,7 @@ export default function AboutPage() {
                 preferred choice for healthcare providers who refuse to compromise on quality.
               </p>
             </div>
-            <img src="/about-company-story.jpg" alt="New Health Medicals Team" className="rounded-lg shadow-lg" />
+            <img src="/about-us-hero.jpg" alt="New Health Medicals Team" className="rounded-lg shadow-lg" />
           </div>
         </div>
       </section>
