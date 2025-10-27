@@ -56,15 +56,15 @@ export default function ContactPage() {
                   </div>
                   <h3 className="font-semibold text-foreground">WhatsApp</h3>
                 </div>
-                <a
+                {/* <a
                   href="https://wa.me/1234567890"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-secondary hover:underline font-semibold text-lg"
                 >
                   +1 (234) 567-890
-                </a>
-                <p className="text-muted-foreground text-sm mt-2">Quick messages and support</p>
+                </a> */}
+                {/* <p className="text-muted-foreground text-sm mt-2">Quick messages and support</p> */}
               </div>
 
               {/* Email */}
@@ -157,8 +157,8 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground mb-2">For quick messages:</p>
-                    <p className="font-semibold text-foreground">
+                    {/* <p className="text-sm text-muted-foreground mb-2">For quick messages:</p> */}
+                    {/* <p className="font-semibold text-foreground">
                       Message us on{" "}
                       <a
                         href="https://wa.me/1234567890"
@@ -168,7 +168,7 @@ export default function ContactPage() {
                       >
                         WhatsApp
                       </a>
-                    </p>
+                    </p> */}
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground mb-2">For detailed inquiries:</p>

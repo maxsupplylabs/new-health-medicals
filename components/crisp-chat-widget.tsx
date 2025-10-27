@@ -151,7 +151,7 @@ export function CrispChatWidget() {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="Type your message..."
-                className="flex-1 px-3 sm:px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+                className="flex-1 px-3 sm:px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-base"
               />
               <button
                 type="submit"
